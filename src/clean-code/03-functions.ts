@@ -4,7 +4,7 @@
         console.log({ movieId });
     }
 
-    function getMovieCastById (id: string) {
+    function getMovieCastById(id: string) {
         console.log({ id });
     }
 
@@ -19,7 +19,7 @@
         title: string;
     }
 
-    function createMovie({cast, description, rating, title}: Movie) {
+    function createMovie({ cast, description, rating, title }: Movie) {
         console.log({ title, description, rating, cast });
     }
 
@@ -28,7 +28,7 @@
         fullName: string;
     }
 
-    function createActor({fullName, birthdate}: Actor) {
+    function createActor({ fullName, birthdate }: Actor) {
         // tarea asincrona para verificar nombre
         // ..
         // ..
@@ -38,4 +38,14 @@
         return true;
 
     }
+
+    const getPayAmount = ({ isDead = false, isSeparated = true, isRetired = false }) => {
+        let result;
+        if (isDead) return result = 1500;
+        
+        if (isSeparated) return result = 2500;
+        
+        return (isRetired) ? 3000 : 4000;
+    }
+
 })();
